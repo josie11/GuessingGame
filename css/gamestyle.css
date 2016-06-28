@@ -1,0 +1,54 @@
+@font-face {
+  font-family: headerfont;
+  src: url(fonts/Cinnabar-Brush.ttf);
+}
+
+body {
+  margin:0;
+  padding:0;
+  /* color image repeat x-pos y-pos */
+  background: #000000 url(questionmark.jpg) repeat;
+}
+
+button {
+  height: 30px;
+  width: 125px;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: white;
+  border: 2px solid #5FBCE4;
+}
+
+#body-box {
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  height: 325px;
+  background-color: #4B5154;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+
+}
+
+#header {
+  margin: 20px 0 20px 0px;
+  text-align: center;
+  font: 85px headerfont;
+  color: #5FBCE4;
+}
+
+#guess {
+  text-align: center;
+}
+
+#guess-box {
+  height: 75px;
+  width:125px;
+  font-size: 40px;
+  border: 2px solid #5FBCE4;
+}
+
+#other-buttons {
+  text-align: center;
+}
