@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../css/main.css" type="/text/css" />
-    <link rel="stylesheet" href="../css/gamestyle.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css" type="/text/css" />
+    <link rel="stylesheet" href="css/gamestyle.css" type="text/css" />
     <title>Guessing Game</title>
   </head>
 
   <body>
-
     <div id="body-box">
-
-      <h1 id="header">Guess The Secret Number</h1>
+      <header id="header">
+        <h1>Guess The Secret Number</h1>
+      </header>
 
       <div id="guess">
+        <h2>You have # guesses left, don't give up!</h2>
         <input id="guess-box" type:"text" placeholder="1-100" /><br>
-        <button id="submit">Submit Your Guess</button>
+        <button type="button" class="btn btn-info" id="guess-button">Submit</button>
+        <h3>I'll let you know if you're getting close</h3>
       </div>
 
       <div id="other-buttons">
-        <button>Restart Game</button>
-        <button>Hint</button>
+        <button type="button" class="btn btn-info">Start Over</button>
+        <button type="button" class="btn btn-info">I NEED HELP!</button>
       </div>
+
     </div>
-
   </body>
-
 </html>

@@ -1,54 +1,75 @@
 @font-face {
   font-family: headerfont;
-  src: url(fonts/Cinnabar-Brush.ttf);
+  src: url(../fonts/Cinnabar-Brush.ttf);
+}
+
+@font-face {
+  font-family: contentfont;
+  src: url(../fonts/Dominique.ttf);
 }
 
 body {
+  background: black url(../images/questionmark.jpg) repeat;
   margin:0;
   padding:0;
-  /* color image repeat x-pos y-pos */
-  background: #000000 url(questionmark.jpg) repeat;
 }
 
 button {
-  height: 30px;
-  width: 125px;
-  margin-top: 10px;
-  font-size: 10px;
-  font-weight: bold;
-  background-color: white;
-  border: 2px solid #5FBCE4;
+  margin: 5px;
 }
 
 #body-box {
-  width: 100%;
-  position: absolute;
-  top: 25%;
-  height: 325px;
-  background-color: #4B5154;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-
+  width: 70%;
+  margin: 100px auto 0 auto;
+  background-color: #8FCCE6;
 }
 
-#header {
-  margin: 20px 0 20px 0px;
+#header, #guess, #other-buttons {
+  border-top: 4px dashed white;
+  border-left: 4px dashed white;
+  border-right: 4px dashed white;
   text-align: center;
-  font: 85px headerfont;
-  color: #5FBCE4;
+}
+
+header {
+  background-color: #4DB6E4;
+  margin: auto 0;
+}
+
+#header h1 {
+  padding: 10px;
+  margin: 0;
+  font: 65px headerfont;
+  color: white;
 }
 
 #guess {
-  text-align: center;
+  margin: 0 auto;
+}
+
+#guess h2, h3 {
+  font-family: contentfont;
+  color: white;
+}
+
+#guess h2{
+  font-size: 40px;
 }
 
 #guess-box {
-  height: 75px;
+  height: 50px;
   width:125px;
-  font-size: 40px;
-  border: 2px solid #5FBCE4;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+#guess-button {
+  width: 125px;
+  font-size: 20px;
 }
 
 #other-buttons {
-  text-align: center;
+  background-color: #C1D9E4;
+  padding: 10px 0;
+  border-bottom: 4px dashed white;
 }
