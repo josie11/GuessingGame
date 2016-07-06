@@ -1,6 +1,7 @@
 /* **** Global Variables **** */
 
 //Guessing Game constructor function with default of 5 guesses
+
 function guessingGame(num = 5) {
   this.totalGuesses = num;
   this.guessArray = [];
@@ -14,10 +15,15 @@ generateWinningNumber = function(){
 	return Math.floor(Math.random() * 100);
 }
 
+//enters each guess by calling other functions.
+
 function playGame(game) {
   game.playersGuessSubmission();
   game.checkGuess();
 }
+
+//depending on whether game is won or lost will display a different picture.
+//removes some of the alerts, disables submit button.
 
 function endGame(status) {
   var src = status === "lose" ? "images/game-over.jpg" : "images/WINNER-YOU.png";
@@ -28,9 +34,12 @@ function endGame(status) {
 }
 
 //sets number of guesses left to display to user
+
 guessingGame.prototype.guessesRemaining = function() {
   return this.totalGuesses - this.guessArray.length;
 }
+
+//changes the number that shows up in #guess-alert header (how many guesses left)
 
 guessingGame.prototype.changeGuess = function() {
   $('#guess-num').text(this.guessesRemaining());
@@ -122,12 +131,15 @@ $(document).ready(function() {
     game = new guessingGame();
     game.playAgain();
   });
+
+  //removes the image that pops up when the game ends, when you click the mouse.
 	$('body').on('click', '#endgame', function() {
 		$(this).remove();
 	});
 
+  //will allow use of 'enter' key to submit guess if there are guesses remaining.
   $('#guess-box').on('keypress', function () {
-    if (event.which == 13 || event.keyCode == 13) {
+    if ((event.which == 13 || event.keyCode == 13) && game.guessesRemaining() > 0) {
       playGame(game);
     }
   });
