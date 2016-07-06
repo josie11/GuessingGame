@@ -1,75 +1,92 @@
 @font-face {
-  font-family: headerfont;
-  src: url(../fonts/Cinnabar-Brush.ttf);
+    font-family: headerfont;
+    src: url(../fonts/Cinnabar-Brush.ttf);
 }
 
 @font-face {
-  font-family: contentfont;
-  src: url(../fonts/Dominique.ttf);
+    font-family: contentfont;
+    src: url(../fonts/Dominique.ttf);
 }
 
 body {
-  background: black url(../images/questionmark.jpg) repeat;
-  margin:0;
-  padding:0;
+    background: black url(../images/questionmark.jpg) repeat;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 button {
-  margin: 5px;
+    margin: 5px;
 }
 
 #body-box {
-  width: 70%;
-  margin: 100px auto 0 auto;
-  background-color: #8FCCE6;
+    width: 70%;
+    margin: 100px auto 0 auto;
+    background-color: #8FCCE6;
 }
 
 #header, #guess, #other-buttons {
-  border-top: 4px dashed white;
-  border-left: 4px dashed white;
-  border-right: 4px dashed white;
-  text-align: center;
+    border-top: 4px dashed white;
+    border-left: 4px dashed white;
+    border-right: 4px dashed white;
+    text-align: center;
 }
 
 header {
-  background-color: #4DB6E4;
-  margin: auto 0;
+    background-color: #4DB6E4;
+    margin: auto 0;
 }
 
 #header h1 {
-  padding: 10px;
-  margin: 0;
-  font: 65px headerfont;
-  color: white;
+    padding: 10px;
+    margin: 0;
+    font: 65px headerfont;
+    color: white;
 }
 
 #guess {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
-#guess h2, h3 {
-  font-family: contentfont;
-  color: white;
+#guess h2, h3, h4 {
+    font-family: contentfont;
+    color: white;
 }
 
-#guess h2{
-  font-size: 40px;
+#guess h2 {
+    font-size: 40px;
 }
 
 #guess-box {
-  height: 50px;
-  width:125px;
-  font-size: 30px;
-  border-radius: 5px;
+    height: 50px;
+    width: 125px;
+    font-size: 30px;
+    border-radius: 5px;
 }
 
 #guess-button {
-  width: 125px;
-  font-size: 20px;
+    width: 125px;
+    font-size: 20px;
 }
 
 #other-buttons {
-  background-color: #C1D9E4;
-  padding: 10px 0;
-  border-bottom: 4px dashed white;
+    background-color: #C1D9E4;
+    padding: 10px 0;
+    border-bottom: 4px dashed white;
+}
+
+.alert {
+    color: #ffee93;
+    text-shadow: 0 0 7px #f7ec66;
+}
+
+#endgame {
+    width: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: 6px solid white;
+    display: none;
 }
