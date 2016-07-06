@@ -23,7 +23,7 @@ function endGame(status) {
   var src = status === "lose" ? "images/game-over.jpg" : "images/WINNER-YOU.png";
   $('body').prepend('<img id="endgame" src=' + src + ' >');
   $('#endgame').fadeIn('slow');
-  $('#player-feedback').text('Click restart if you wish to play again.');
+  $('#player-feedback').text('Click "Start Over" if you wish to play again.');
   $('#guess-button').prop('disabled', true);
 }
 
@@ -97,6 +97,7 @@ guessingGame.prototype.provideHint = function() {
 
 guessingGame.prototype.playAgain = function() {
   this.changeGuess();
+  $('#guess-box').val('');
   $('#player-alert').remove();
   $('#player-feedback').text('You have started a new game.');
   $('#guess-button').prop('disabled', false);
