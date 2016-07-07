@@ -62,7 +62,7 @@ guessingGame.prototype.lowerOrHigher = function() {
   $('#player-feedback').text('Your guess is ' + lowerHigher + ' than the secret number, and within ' + distance + ' digits.');
 }
 
-// Check if the Player's Guess is the winning number
+// Check if the Player's Guess is the winning number, duplicate, or wrong.
 
 guessingGame.prototype.checkGuess = function() {
 	function alertPlayer(text) {
