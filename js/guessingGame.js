@@ -82,10 +82,9 @@ guessingGame.prototype.checkGuess = function() {
         endGame("lose");
       } else {
         alertPlayer(this.playerGuess +' is not the secret number. Try again...');
+      	this.changeGuess();
+      	this.lowerOrHigher();
       }
-
-      this.changeGuess();
-      this.lowerOrHigher();
   }
 }
 
